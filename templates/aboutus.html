@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto" style="background-image:url('https://img.freepik.com/free-vector/elegant-dark-background-with-golden-details_52683-33648.jpg?t=st=1657968765~exp=1657969365~hmac=aa4be9df234b7fcb82515c37be1feb3bd66b1f2878ae0231176053a1dd29b25a&w=900')">
+      <div class="flex flex-col text-center w-full mb-20 ">
+        <h2 class="text-lg text-green-500 tracking-widest font-extrabold title-font mb-1">ABOUT US</h2>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Jayesh Multi Trade</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-white">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+      </div>
+    </div>
+    <div>
+      <div class="flex flex-wrap">
+        {% for about in about %}
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">{{about.title}}</h2>
+          <p class="leading-relaxed text-base mb-4">{{about.description}}</p>
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <img class="h-40 rounded w-full object-cover object-center mb-6" src="{{about.image.url}}" alt="content">
+          </div>
+        </div>
+        {% endfor %}
+        {% comment %} <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">The Catalyzer</h2>
+          <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/720x400" alt="content">
+          </div>
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Neptune</h2>
+          <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/720x400" alt="content">
+          </div>
+        </div>
+        <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+          <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Melanchole</h2>
+          <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/720x400" alt="content">
+          </div>
+        </div> {% endcomment %}
+      </div>
+    </div>
+  </section>
+
+
+
+    {% comment %} <div>
+        <img src="/static/img/aboutimg.png" class="about-banner" alt="Responsive image" style="width:100% ;">
+
+    </div>
+
+    <hr style="border-top: 5px solid #004899;margin:45px 25px 35px 25px ;">
+    <div class="row" style="margin-left:200px ;">
+        <div class="col-lg-6 col-md-12">
+            <h2 style="text-align: center ;"><strong> Who we are? </strong></h2>
+            <p class="about-para" id="ourmission">
+                FMCG Gurus provides market research and insight into consumer attitudes and behaviours across the food,
+                beverage and supplement markets worldwide. The leading global FMCG companies trust us in helping them
+                make more informed decisions by leveraging our services and solutions.
+                <br><br>Our global reach includes ingredient analysis, future trend mapping and actionable
+                recommendations. <br><b style="font-weight:bold">"Consumer Experts, Insight Driven"</b>
+            </p>
+        </div>
+        <div class="col-lg-6 col-md-12 ">
+            <img style="height:200px ;width:200px; border-radius: 50%;" src="/static/img/logo.jpeg" alt="logo">
+        </div>
+
+    </div>
+    <hr style="border-top: 5px solid #004899;margin:0px 25px 0px 25px ; width: 750px;">
+    <div class="row" style="margin-left:350px; margin-right: 350px;">
+
+        <div class="col-lg-6 col-md-12">
+            <img style="height:250px ;width:300px;" src="/static/img/mission.png" alt="logo">
+        </div>
+
+        <div class="col-lg-6 col-md-12">
+            <h2 style="text-align: center ;"><strong> Our Mission </strong></h2>
+            <p class="about-para" id="ourmission">
+                The world around us is changing faster than ever. Our mission is to help our clients understand these
+                changes, formulate the right strategy, and provide the unparalleled expertise required to stay ahead.
+            </p>
+        </div>
+
+    </div>
+    <hr style="border-top: 5px solid #004899; margin-left: 550px; margin-bottom: 25px; margin-top: 15px;">
+    <div class="row" style="margin-left:200px ;">
+        <div class="col-lg-6 col-md-12">
+            <h2 style="text-align: center ;"><strong> Our Values</strong></h2>
+            <p class="about-para" id="ourmission">
+                FMCG Gurus is dedicated to being a world leader in consumer insights and market research. Our values are
+                moulded by our continued success in providing the necessary partnerships required at any stage of the
+                supply chain. Our market data, consumer trends, and analysis ensures we not only help you make more
+                informed decisions but also the right decisions.
+            </p>
+
+        </div>
+        <div class="col-lg-6 col-md-12 ">
+            <img style="height:250px ;width:250px;" src="/static/img/values.jpg" alt="logo">
+        </div>
+
+    </div>
+    <hr style="border-top: 5px solid #004899;margin:45px 25px 35px 25px ;">
+
+
+    <!-- -----------------BRANDS------------------------------ -->
+    <div class="slider" style="height: 150px; width: 100%; margin: 25px;">
+        <h1 style="padding-bottom: 34px; text-align:center"> <strong>Our Partners</strong>
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250"
+                        alt="" />
+                </div>
+            </div>
+    </div>
+
+
+    <section style=" height: 50px; padding: 6%;background-image: url('static/img/aboutreport.jpg');background-size: cover;">
+        <div class="a" style=" font-weight: 600; font-size: 15;margin: 0px 0px 0px 60px;text-align:left;">
+            <h3 style="font-size: 20px;font-weight: 600;">How can we add value?
+                <br>
+                Contact Us to find out more.
+            </h3>
+
+            <a href="contact" class="btn btn-info report-button" style="background-color: #0054a6;"
+                role="button">Contact Us</a>
+
+        </div>
+
+
+        <br>
+
+    </section> {% endcomment %}
+{% endblock %}
